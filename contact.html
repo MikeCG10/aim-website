@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact | AIM</title>
-  <meta name="description" content="Get in touch with AIM, join the club, or request a mentor.">
+  <meta name="description" content="Get in touch with AIM at CSUSB, join the club, or request a mentor.">
   <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
   <link rel="stylesheet" href="css/styles.css">
 </head>
@@ -18,6 +18,7 @@
       <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
+        <li><a href="membership.html">Membership</a></li>
         <li><a href="events.html">Events</a></li>
         <li><a href="team.html">Team</a></li>
         <li><a href="contact.html" class="active">Contact</a></li>
@@ -38,12 +39,12 @@
 
     <section class="section">
       <div class="container contact-grid">
-        <div>
+        <div class="reveal">
           <h2>Contact info</h2>
           <ul class="info-list">
             <li>
               <span class="label">Email</span>
-              <a href="mailto:aimclub@example.edu">aimclub@example.edu</a>
+              <a href="mailto:aimclub@coyote.csusb.edu">aimclub@coyote.csusb.edu</a>
             </li>
             <li>
               <span class="label">Discord</span>
@@ -51,30 +52,32 @@
             </li>
             <li>
               <span class="label">Instagram</span>
-              <a href="#">@aim.club</a>
+              <a href="#">@aim.csusb</a>
             </li>
             <li>
               <span class="label">LinkedIn</span>
-              <a href="#">AIM Club</a>
+              <a href="#">AIM &mdash; CSUSB</a>
             </li>
             <li>
               <span class="label">Meetings</span>
-              [Day of week], [Time] &middot; [Room / Building], [Your University]
+              JB-122 or Zoom &middot; schedule set by Cabinet each semester &middot; California State University, San Bernardino
             </li>
           </ul>
 
           <h2 style="margin-top:40px;">Mentorship program</h2>
           <p style="color:var(--text-muted);">
-            Every member can request a mentor matched to their interests in AI, security, or general career
-            guidance. Fill out the request form and our Mentorship Lead will pair you with someone within two weeks.
+            Every Mentee member can request a mentor matched to Technical, Competition, Framework, Career, Research,
+            or General focus areas. Fill out the request form and our Cabinet will pair you with a mentor. If a
+            match isn't working, you can request a reassignment at any time.
           </p>
           <a href="#" class="btn btn-outline">Request a mentor</a>
         </div>
 
-        <div class="form-card">
+        <div class="form-card reveal">
           <h3>Join AIM</h3>
           <p style="color:var(--text-muted); font-size:0.9rem;">
-            Fill out our membership form and we'll add you to our mailing list and Discord.
+            Fill out our membership form and we'll add you to our mailing list and Discord. See the
+            <a href="membership.html">Membership</a> page for details on Mentee, Mentor, and Associate options.
           </p>
           <a href="#" class="btn btn-primary">Open membership form</a>
         </div>
@@ -83,17 +86,26 @@
   </main>
 
   <footer class="site-footer">
-    <div class="container footer-inner">
-      <div>
-        <div class="brand"><span class="brand-mark"><img src="assets/logo.svg" alt="" width="24" height="24"></span> AIM</div>
-        <p class="footer-note">AI, InfoSec &amp; Mentorship Club &middot; [Your University]</p>
+    <div class="container">
+      <div class="footer-inner">
+        <div>
+          <div class="brand"><span class="brand-mark"><img src="assets/logo.svg" alt="" width="24" height="24"></span> AIM</div>
+          <p class="footer-note">AI, InfoSec &amp; Mentorship &middot; California State University, San Bernardino &middot; Affiliated with the CSUSB Center for Cyber &amp; AI</p>
+        </div>
+        <ul class="footer-links">
+          <li><a href="about.html">About</a></li>
+          <li><a href="membership.html">Membership</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="team.html">Team</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="constitution.html">Constitution</a></li>
+        </ul>
       </div>
-      <ul class="footer-links">
-        <li><a href="about.html">About</a></li>
-        <li><a href="events.html">Events</a></li>
-        <li><a href="team.html">Team</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
+      <p class="footer-legal">
+        AIM does not discriminate on the basis of race, religion, national origin, ethnicity, color, age, gender,
+        marital status, citizenship, sexual orientation, and/or disability. Membership and leadership are open to
+        all currently enrolled CSUSB students. Read the full <a href="constitution.html">AIM Constitution</a>.
+      </p>
     </div>
   </footer>
 

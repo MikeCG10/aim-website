@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Events | AIM</title>
-  <meta name="description" content="Upcoming and past AIM club events — workshops, CTFs, and mentorship sessions.">
+  <meta name="description" content="Upcoming and past AIM events — workshops, competition prep, and mentorship sessions at CSUSB.">
   <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
   <link rel="stylesheet" href="css/styles.css">
 </head>
@@ -18,6 +18,7 @@
       <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
+        <li><a href="membership.html">Membership</a></li>
         <li><a href="events.html" class="active">Events</a></li>
         <li><a href="team.html">Team</a></li>
         <li><a href="contact.html">Contact</a></li>
@@ -32,23 +33,32 @@
     <section class="page-header">
       <div class="container">
         <h1>Events</h1>
-        <p>Workshops, competitions, and mentorship sessions — open to all members.</p>
+        <p>Workshops, competition prep, and mentorship sessions — open to all members.</p>
       </div>
     </section>
 
     <section class="section">
       <div class="container">
-        <div class="section-header">
+        <div class="section-header reveal">
           <h2>Upcoming</h2>
         </div>
-        <div class="card-grid">
+        <div class="card-grid reveal">
           <div class="card">
             <div class="card-image-placeholder">Event photo</div>
             <div class="card-body">
               <span class="card-tag ai">AI</span>
               <h3>Intro to LLM Agents Workshop</h3>
-              <p class="meta">[Month] [Day], [Year] &middot; [Room / Building]</p>
+              <p class="meta">[Month] [Day], [Year] &middot; JB-122, CSUSB</p>
               <p class="desc">Build your first AI agent from scratch — no experience required.</p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-image-placeholder">Event photo</div>
+            <div class="card-body">
+              <span class="card-tag competition">Competition</span>
+              <h3>CCDC Prep Session</h3>
+              <p class="meta">[Month] [Day], [Year] &middot; JB-122, CSUSB</p>
+              <p class="desc">Team practice for the National Collegiate Cyber Defense Competition — blue team drills and scoring walkthroughs.</p>
             </div>
           </div>
         </div>
@@ -57,10 +67,10 @@
 
     <section class="section section-alt">
       <div class="container">
-        <div class="section-header">
+        <div class="section-header reveal">
           <h2>Past events</h2>
         </div>
-        <div class="card-grid">
+        <div class="card-grid reveal">
           <div class="card">
             <div class="card-image-placeholder">Event photo</div>
             <div class="card-body">
@@ -82,10 +92,28 @@
           <div class="card">
             <div class="card-image-placeholder">Event photo</div>
             <div class="card-body">
+              <span class="card-tag competition">Competition</span>
+              <h3>National Cyber League Kickoff</h3>
+              <p class="meta">[Month] [Year]</p>
+              <p class="desc">Members registered for NCL and worked through practice modules covering OSINT, cryptography, and log analysis.</p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-image-placeholder">Event photo</div>
+            <div class="card-body">
               <span class="card-tag ai">AI</span>
               <h3>Guest Talk: Careers in Applied AI</h3>
               <p class="meta">[Month] [Year]</p>
               <p class="desc">An industry engineer shared how they broke into AI roles and answered member Q&amp;A.</p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-image-placeholder">Event photo</div>
+            <div class="card-body">
+              <span class="card-tag infosec">InfoSec</span>
+              <h3>NIST Framework Workshop</h3>
+              <p class="meta">[Month] [Year]</p>
+              <p class="desc">Hands-on walkthrough of the NIST Cybersecurity Framework 2.0 and SP 800-53 controls.</p>
             </div>
           </div>
           <div class="card">
@@ -103,17 +131,26 @@
   </main>
 
   <footer class="site-footer">
-    <div class="container footer-inner">
-      <div>
-        <div class="brand"><span class="brand-mark"><img src="assets/logo.svg" alt="" width="24" height="24"></span> AIM</div>
-        <p class="footer-note">AI, InfoSec &amp; Mentorship Club &middot; [Your University]</p>
+    <div class="container">
+      <div class="footer-inner">
+        <div>
+          <div class="brand"><span class="brand-mark"><img src="assets/logo.svg" alt="" width="24" height="24"></span> AIM</div>
+          <p class="footer-note">AI, InfoSec &amp; Mentorship &middot; California State University, San Bernardino &middot; Affiliated with the CSUSB Center for Cyber &amp; AI</p>
+        </div>
+        <ul class="footer-links">
+          <li><a href="about.html">About</a></li>
+          <li><a href="membership.html">Membership</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="team.html">Team</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="constitution.html">Constitution</a></li>
+        </ul>
       </div>
-      <ul class="footer-links">
-        <li><a href="about.html">About</a></li>
-        <li><a href="events.html">Events</a></li>
-        <li><a href="team.html">Team</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
+      <p class="footer-legal">
+        AIM does not discriminate on the basis of race, religion, national origin, ethnicity, color, age, gender,
+        marital status, citizenship, sexual orientation, and/or disability. Membership and leadership are open to
+        all currently enrolled CSUSB students. Read the full <a href="constitution.html">AIM Constitution</a>.
+      </p>
     </div>
   </footer>
 

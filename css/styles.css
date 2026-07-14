@@ -502,27 +502,85 @@ a:hover { text-decoration: underline; }
 .card .meta { color: var(--text-muted); font-size: 0.85rem; margin: 0 0 10px; }
 .card p.desc { color: var(--text-muted); margin: 0; font-size: 0.92rem; }
 
-/* ===== Project presentation cards ===== */
-.project-meta {
+/* ===== Project schedule (compact scrollable list) ===== */
+.schedule-box {
+  background: var(--surface-solid);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  max-height: 460px;
+  overflow-y: auto;
+}
+
+.schedule-row {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-  gap: 14px;
-  margin-top: 16px;
-  padding-top: 16px;
-  border-top: 1px solid var(--border);
+  grid-template-columns: 1.3fr 1fr 1fr auto auto;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--border);
 }
 
-.project-meta .label {
-  display: block;
+.schedule-row:last-child { border-bottom: none; }
+
+.schedule-name {
+  color: #c9a6ff;
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+
+.schedule-person {
+  display: flex;
+  align-items: center;
+  gap: 8px;
   font-family: var(--font-mono);
-  font-size: 0.7rem;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  color: var(--text-dim);
-  margin-bottom: 4px;
+  font-size: 0.82rem;
+  color: var(--ai);
+  white-space: nowrap;
 }
 
-.project-meta p { margin: 0; font-size: 0.88rem; color: var(--text); }
+.schedule-avatar {
+  flex: none;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-dim);
+}
+
+.schedule-avatar svg { width: 14px; height: 14px; }
+
+.schedule-time {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--text);
+  white-space: nowrap;
+}
+
+.schedule-go {
+  justify-self: end;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  padding: 5px 12px;
+  border-radius: 6px;
+  background: rgba(52, 224, 161, 0.16);
+  color: var(--mentorship);
+  white-space: nowrap;
+}
+
+.schedule-go:hover { background: rgba(52, 224, 161, 0.26); text-decoration: none; }
+
+@media (max-width: 720px) {
+  .schedule-row {
+    grid-template-columns: 1fr;
+    gap: 6px;
+  }
+  .schedule-go { justify-self: start; }
+}
 
 /* ===== Gallery ===== */
 .gallery-grid {

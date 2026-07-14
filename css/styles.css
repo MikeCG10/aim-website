@@ -23,6 +23,8 @@
   --radius: 16px;
   --radius-sm: 10px;
   --max-width: 1160px;
+
+  --font-mono: "Space Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
 }
 
 * { box-sizing: border-box; }
@@ -252,10 +254,30 @@ a:hover { text-decoration: underline; }
   to { transform: translate(40px, 50px) scale(1.08); }
 }
 
+/* ===== Animated background grid ===== */
+.grid-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  background-image:
+    linear-gradient(rgba(34, 211, 238, 0.09) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(34, 211, 238, 0.09) 1px, transparent 1px);
+  background-size: 44px 44px;
+  mask-image: radial-gradient(ellipse 70% 65% at 50% 30%, black 40%, transparent 90%);
+  -webkit-mask-image: radial-gradient(ellipse 70% 65% at 50% 30%, black 40%, transparent 90%);
+  animation: grid-fade 6s ease-in-out infinite;
+}
+
+@keyframes grid-fade {
+  0%, 100% { opacity: 0.4; }
+  50% { opacity: 0.85; }
+}
+
 .hero .eyebrow {
   display: inline-flex;
   align-items: center;
   gap: 8px;
+  font-family: var(--font-mono);
   color: var(--text-muted);
   text-transform: uppercase;
   letter-spacing: 0.14em;
@@ -266,6 +288,17 @@ a:hover { text-decoration: underline; }
   border: 1px solid var(--border);
   border-radius: 999px;
   background: rgba(255, 255, 255, 0.03);
+}
+
+.hero .eyebrow::after {
+  content: "_";
+  color: var(--ai);
+  animation: blink 1.1s steps(1) infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 0; }
+  50% { opacity: 1; }
 }
 
 .hero h1 {
@@ -310,7 +343,8 @@ a:hover { text-decoration: underline; }
   border-radius: 999px;
   background: var(--surface);
   border: 1px solid var(--border);
-  font-size: 0.82rem;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
   color: var(--text-muted);
   backdrop-filter: blur(8px);
 }
@@ -399,8 +433,9 @@ a:hover { text-decoration: underline; }
   border-radius: var(--radius-sm);
   background: var(--surface);
   border: 1px solid var(--border);
-  font-size: 0.88rem;
-  font-weight: 600;
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  font-weight: 700;
   color: var(--text);
   backdrop-filter: blur(8px);
   transition: border-color 0.2s ease, transform 0.2s ease;
@@ -434,7 +469,8 @@ a:hover { text-decoration: underline; }
 
 .card-tag {
   display: inline-block;
-  font-size: 0.72rem;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.06em;
@@ -713,4 +749,6 @@ a:hover { text-decoration: underline; }
 @media (prefers-reduced-motion: reduce) {
   .reveal { opacity: 1; transform: none; transition: none; }
   .hero::before, .hero::after { animation: none; }
+  .grid-overlay { animation: none; opacity: 0.5; }
+  .hero .eyebrow::after { animation: none; opacity: 1; }
 }

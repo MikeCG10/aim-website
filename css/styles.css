@@ -548,6 +548,7 @@ a:hover { text-decoration: underline; }
   align-items: center;
   justify-content: center;
   color: var(--text-dim);
+  overflow: hidden;
 }
 
 .schedule-avatar svg { width: 14px; height: 14px; }

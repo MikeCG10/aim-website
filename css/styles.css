@@ -447,6 +447,7 @@ a:hover { text-decoration: underline; }
 .card-tag.infosec { background: rgba(251, 91, 138, 0.14); color: var(--infosec); }
 .card-tag.mentorship { background: rgba(52, 224, 161, 0.14); color: var(--mentorship); }
 .card-tag.competition { background: rgba(124, 92, 255, 0.16); color: #b7a9ff; }
+.card-tag.neutral { background: rgba(255, 255, 255, 0.08); color: var(--text-muted); }
 
 .card-image-placeholder {
   height: 150px;

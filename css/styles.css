@@ -548,11 +548,6 @@ a:hover { text-decoration: underline; }
 
 .schedule-table tbody tr:hover .schedule-name { color: #dcc4ff; text-shadow: 0 0 12px rgba(201, 166, 255, 0.5); }
 
-.schedule-table tbody tr:hover .schedule-go {
-  background: rgba(52, 224, 161, 0.28);
-  transform: scale(1.06);
-}
-
 /* staggered entrance animation once the box scrolls into view */
 .schedule-box tbody tr {
   opacity: 0;
@@ -616,21 +611,12 @@ a:hover { text-decoration: underline; }
   white-space: nowrap;
 }
 
-.schedule-go {
-  display: inline-block;
+.schedule-location {
   font-family: var(--font-mono);
-  font-size: 0.72rem;
-  font-weight: 700;
-  letter-spacing: 0.04em;
-  padding: 5px 12px;
-  border-radius: 6px;
-  background: rgba(52, 224, 161, 0.16);
-  color: var(--mentorship);
+  font-size: 0.85rem;
+  color: var(--text-muted);
   white-space: nowrap;
-  transition: background 0.2s ease, transform 0.2s ease;
 }
-
-.schedule-go:hover { text-decoration: none; }
 
 @media (prefers-reduced-motion: reduce) {
   .schedule-box tbody tr { opacity: 1; transform: none; transition: none; }

@@ -502,30 +502,80 @@ a:hover { text-decoration: underline; }
 .card .meta { color: var(--text-muted); font-size: 0.85rem; margin: 0 0 10px; }
 .card p.desc { color: var(--text-muted); margin: 0; font-size: 0.92rem; }
 
-/* ===== Project schedule (compact scrollable list) ===== */
+/* ===== Project schedule (animated table) ===== */
 .schedule-box {
   background: var(--surface-solid);
   border: 1px solid var(--border);
   border-radius: var(--radius);
-  max-height: 460px;
-  overflow-y: auto;
+  max-height: 480px;
+  overflow: auto;
 }
 
-.schedule-row {
-  display: grid;
-  grid-template-columns: 1.3fr 1fr 1fr auto auto;
-  align-items: center;
-  gap: 16px;
-  padding: 16px 20px;
+.schedule-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.schedule-table thead th {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background: var(--surface-solid);
+  text-align: left;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-dim);
+  padding: 14px 20px;
   border-bottom: 1px solid var(--border);
+  white-space: nowrap;
 }
 
-.schedule-row:last-child { border-bottom: none; }
+.schedule-table tbody td {
+  padding: 14px 20px;
+  border-bottom: 1px solid var(--border);
+  vertical-align: middle;
+}
+
+.schedule-table tbody tr:last-child td { border-bottom: none; }
+
+.schedule-table tbody tr {
+  transition: background 0.2s ease;
+}
+
+.schedule-table tbody tr:hover { background: rgba(124, 92, 255, 0.06); }
+
+.schedule-table tbody tr:hover .schedule-name { color: #dcc4ff; text-shadow: 0 0 12px rgba(201, 166, 255, 0.5); }
+
+.schedule-table tbody tr:hover .schedule-go {
+  background: rgba(52, 224, 161, 0.28);
+  transform: scale(1.06);
+}
+
+/* staggered entrance animation once the box scrolls into view */
+.schedule-box tbody tr {
+  opacity: 0;
+  transform: translateX(-14px);
+  transition: opacity 0.45s ease, transform 0.45s ease;
+}
+
+.schedule-box.in-view tbody tr { opacity: 1; transform: translateX(0); }
+
+.schedule-box.in-view tbody tr:nth-child(1) { transition-delay: 0.04s; }
+.schedule-box.in-view tbody tr:nth-child(2) { transition-delay: 0.09s; }
+.schedule-box.in-view tbody tr:nth-child(3) { transition-delay: 0.14s; }
+.schedule-box.in-view tbody tr:nth-child(4) { transition-delay: 0.19s; }
+.schedule-box.in-view tbody tr:nth-child(5) { transition-delay: 0.24s; }
+.schedule-box.in-view tbody tr:nth-child(6) { transition-delay: 0.29s; }
+.schedule-box.in-view tbody tr:nth-child(7) { transition-delay: 0.34s; }
+.schedule-box.in-view tbody tr:nth-child(8) { transition-delay: 0.39s; }
 
 .schedule-name {
   color: #c9a6ff;
   font-weight: 700;
   font-size: 0.95rem;
+  transition: color 0.2s ease, text-shadow 0.2s ease;
 }
 
 .schedule-person {
@@ -549,6 +599,12 @@ a:hover { text-decoration: underline; }
   justify-content: center;
   color: var(--text-dim);
   overflow: hidden;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.schedule-table tbody tr:hover .schedule-avatar {
+  background: rgba(34, 211, 238, 0.18);
+  transform: scale(1.08);
 }
 
 .schedule-avatar svg { width: 14px; height: 14px; }
@@ -561,7 +617,7 @@ a:hover { text-decoration: underline; }
 }
 
 .schedule-go {
-  justify-self: end;
+  display: inline-block;
   font-family: var(--font-mono);
   font-size: 0.72rem;
   font-weight: 700;
@@ -571,16 +627,17 @@ a:hover { text-decoration: underline; }
   background: rgba(52, 224, 161, 0.16);
   color: var(--mentorship);
   white-space: nowrap;
+  transition: background 0.2s ease, transform 0.2s ease;
 }
 
-.schedule-go:hover { background: rgba(52, 224, 161, 0.26); text-decoration: none; }
+.schedule-go:hover { text-decoration: none; }
+
+@media (prefers-reduced-motion: reduce) {
+  .schedule-box tbody tr { opacity: 1; transform: none; transition: none; }
+}
 
 @media (max-width: 720px) {
-  .schedule-row {
-    grid-template-columns: 1fr;
-    gap: 6px;
-  }
-  .schedule-go { justify-self: start; }
+  .schedule-table { min-width: 640px; }
 }
 
 /* ===== Gallery ===== */

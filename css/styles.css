@@ -1,4 +1,4 @@
-/* ===== AIM Club — shared styles ===== */
+/* ===== AIM Club - shared styles ===== */
 
 :root {
   --bg: #171717;
@@ -204,7 +204,7 @@ a:hover { text-decoration: underline; }
   border-bottom: 1px solid var(--border);
 }
 
-/* Circuit-board trace graphic — used at the top of every page. Etched lines, no glow, one-time draw-in. */
+/* Circuit-board trace graphic, used at the top of every page. Etched lines, no glow, one-time draw-in. */
 .circuit-bg {
   position: absolute;
   inset: 0;

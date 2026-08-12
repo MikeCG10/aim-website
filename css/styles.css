@@ -656,6 +656,16 @@ a:hover { text-decoration: underline; }
 
 .mentor-bio-inner a { color: var(--accent); }
 
+/* ===== Mentors page: larger, easier-to-read cards ===== */
+.mentor-grid { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; }
+.mentor-grid .team-card { padding: 36px 26px; }
+.mentor-grid .avatar { width: 104px; height: 104px; }
+.mentor-grid h3 { font-size: 1.25rem; }
+.mentor-grid .card-tag { font-size: 0.76rem; padding: 5px 12px; }
+.mentor-grid .role-desc { font-size: 0.98rem; line-height: 1.5; }
+.mentor-grid .mentor-hint { font-size: 0.72rem; }
+.mentor-grid .mentor-bio-inner p { font-size: 1rem; line-height: 1.65; }
+
 /* ===== Membership tiers ===== */
 .tier-grid {
   display: grid;

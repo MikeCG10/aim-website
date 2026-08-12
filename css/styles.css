@@ -584,6 +584,78 @@ a:hover { text-decoration: underline; }
 .team-card .role { color: var(--text-muted); font-size: 0.88rem; margin: 0 0 10px; font-weight: 600; }
 .team-card .role-desc { color: var(--text-dim); font-size: 0.82rem; margin: 0; }
 
+/* ===== Mentor photo + bio toggle ===== */
+.mentor-photo-btn {
+  appearance: none;
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0 auto 16px;
+  cursor: pointer;
+  display: block;
+  border-radius: 50%;
+}
+
+.mentor-photo-btn .avatar {
+  overflow: hidden;
+  transition: border-color 0.15s ease, transform 0.15s ease;
+}
+
+.mentor-photo-btn .avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.mentor-photo-btn:hover .avatar,
+.mentor-photo-btn:focus-visible .avatar {
+  border-color: var(--accent);
+  transform: translateY(-2px);
+}
+
+.mentor-photo-btn:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+.mentor-hint {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.66rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-dim);
+  margin-top: 10px;
+}
+
+.team-card.bio-open .mentor-hint { color: var(--accent); }
+
+.mentor-bio {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.25s ease;
+  text-align: left;
+  margin-top: 14px;
+}
+
+.team-card.bio-open .mentor-bio { grid-template-rows: 1fr; }
+
+.mentor-bio-inner { overflow: hidden; }
+
+.mentor-bio-inner p {
+  color: var(--text-muted);
+  font-size: 0.86rem;
+  line-height: 1.55;
+  margin: 0 0 10px;
+  padding-top: 14px;
+  border-top: 1px solid var(--border);
+}
+
+.mentor-bio-inner p:last-child { margin-bottom: 0; }
+
+.mentor-bio-inner a { color: var(--accent); }
+
 /* ===== Membership tiers ===== */
 .tier-grid {
   display: grid;

@@ -17,6 +17,18 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
+  var mentorButtons = document.querySelectorAll(".mentor-photo-btn");
+  mentorButtons.forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      var card = btn.closest(".team-card");
+      if (!card) return;
+      var isOpen = card.classList.toggle("bio-open");
+      btn.setAttribute("aria-expanded", isOpen);
+      var hint = card.querySelector(".mentor-hint");
+      if (hint) hint.textContent = isOpen ? "Hide bio −" : "Read bio +";
+    });
+  });
+
   var revealEls = document.querySelectorAll(".reveal");
   if (revealEls.length && "IntersectionObserver" in window) {
     var observer = new IntersectionObserver(

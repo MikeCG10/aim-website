@@ -641,7 +641,16 @@ a:hover { text-decoration: underline; }
 
 .team-card.bio-open .mentor-bio { grid-template-rows: 1fr; }
 
-.mentor-bio-inner { overflow: hidden; }
+.mentor-bio-inner {
+  max-height: 380px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding-right: 8px;
+}
+
+.mentor-bio-inner::-webkit-scrollbar { width: 6px; }
+.mentor-bio-inner::-webkit-scrollbar-track { background: transparent; }
+.mentor-bio-inner::-webkit-scrollbar-thumb { background: var(--border-strong); border-radius: 3px; }
 
 .mentor-bio-inner p {
   color: var(--text-muted);
@@ -665,17 +674,6 @@ a:hover { text-decoration: underline; }
 .mentor-grid .role-desc { font-size: 0.98rem; line-height: 1.5; }
 .mentor-grid .mentor-hint { font-size: 0.72rem; }
 .mentor-grid .mentor-bio-inner p { font-size: 1rem; line-height: 1.65; }
-
-.mentor-bio-inner--scroll {
-  max-height: 380px;
-  overflow-y: auto;
-  overflow-x: hidden;
-  padding-right: 8px;
-}
-
-.mentor-bio-inner--scroll::-webkit-scrollbar { width: 6px; }
-.mentor-bio-inner--scroll::-webkit-scrollbar-track { background: transparent; }
-.mentor-bio-inner--scroll::-webkit-scrollbar-thumb { background: var(--border-strong); border-radius: 3px; }
 
 /* ===== Membership tiers ===== */
 .tier-grid {

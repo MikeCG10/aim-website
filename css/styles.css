@@ -669,6 +669,26 @@ a:hover { text-decoration: underline; }
 .team-card .role { color: var(--text-muted); font-size: 0.88rem; margin: 0 0 10px; font-weight: 600; }
 .team-card .role-desc { color: var(--text-dim); font-size: 0.82rem; margin: 0; }
 
+.team-card--open {
+  border-style: dashed;
+  border-color: var(--border-strong);
+  background: transparent;
+}
+
+.team-card--open .avatar {
+  background: transparent;
+  border: 1px dashed var(--border-strong);
+  color: var(--text-dim);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+
+.team-card--open h3 { color: var(--text-muted); }
+.team-card--open .role { color: var(--accent); }
+
 /* ===== Mentor photo + bio toggle ===== */
 .mentor-photo-btn {
   appearance: none;

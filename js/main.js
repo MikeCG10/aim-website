@@ -29,11 +29,11 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  var weekGrid = document.querySelector(".week-grid");
-  if (weekGrid) {
+  var weekBoard = document.querySelector(".wk");
+  if (weekBoard) {
     var dow = new Date().getDay();
     if (dow >= 1 && dow <= 5) {
-      weekGrid.querySelectorAll('[data-day="' + dow + '"]').forEach(function (el) {
+      weekBoard.querySelectorAll('[data-day="' + dow + '"]').forEach(function (el) {
         el.classList.add("is-today");
       });
     }

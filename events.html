@@ -102,117 +102,103 @@
 
     <section class="week-schedule">
       <div class="week-inner">
-        <div class="week-head">
-          <p>Every AIM project and workshop this semester on one screen. Drop into anything that interests you, no sign-up needed.</p>
-        </div>
+        <p class="week-lede">Every AIM project and workshop this semester on one screen. Drop into anything that interests you, no sign-up needed.</p>
 
         <p class="week-legend reveal">
-          <span class="week-legend-item d1"><span class="dot"></span>Mon</span>
-          <span class="week-legend-item d2"><span class="dot"></span>Tue</span>
-          <span class="week-legend-item d3"><span class="dot"></span>Wed</span>
-          <span class="week-legend-item d4"><span class="dot"></span>Thu</span>
-          <span class="week-legend-item d5"><span class="dot"></span>Fri</span>
+          <span class="week-legend-item"><span class="pill-amber"></span>Last session date</span>
           <span class="week-legend-sep" aria-hidden="true"></span>
-          <span class="week-legend-item"><span class="pill-amber"></span>last session date</span>
-          <span class="week-legend-item">Room JB-122 &middot; times Pacific</span>
+          <span class="week-legend-item">Room JB-122</span>
+          <span class="week-legend-sep" aria-hidden="true"></span>
+          <span class="week-legend-item">Times Pacific</span>
         </p>
 
-        <div class="week-grid reveal" role="group" aria-label="Weekly project schedule, Monday to Friday">
-          <div class="wg-corner" aria-hidden="true"></div>
+        <div class="wk reveal">
+          <div class="wk-col d1" data-day="1">
+            <div class="wk-head" data-day="1">Mon</div>
+            <article class="wk-card">
+              <span class="wk-t">12:00&ndash;1:00 PM</span>
+              <span class="wk-n">SecuSmart</span>
+              <span class="schedule-until">Ends Oct 12</span>
+            </article>
+          </div>
 
-          <div class="wg-day d1" data-day="1" style="grid-column:2;grid-row:1">Mon</div>
-          <article class="wg-item d1" style="grid-column:2;grid-row:6 / span 2">
-            <span class="wg-t">12:00&ndash;1:00</span>
-            <span class="wg-body"><span class="wg-n">SecuSmart</span><span class="schedule-until">Ends Oct 12</span></span>
-          </article>
+          <div class="wk-col d2" data-day="2">
+            <div class="wk-head" data-day="2">Tue</div>
+            <article class="wk-card">
+              <span class="wk-t">11:00 AM&ndash;12:00 PM</span>
+              <span class="wk-n">Sec+ Boot Camp</span>
+            </article>
+            <article class="wk-card">
+              <span class="wk-t">12:00&ndash;1:00 PM</span>
+              <span class="wk-n">Packet Sniffers</span>
+            </article>
+            <article class="wk-card">
+              <span class="wk-t">2:30&ndash;3:30 PM</span>
+              <span class="wk-n">AI Agents</span>
+              <span class="schedule-until">Ends Oct 13</span>
+            </article>
+            <article class="wk-card">
+              <span class="wk-t">4:30&ndash;5:30 PM</span>
+              <span class="wk-n">RHEL Rookies</span>
+            </article>
+          </div>
 
-          <div class="wg-day d2" data-day="2" style="grid-column:3;grid-row:1">Tue</div>
-          <article class="wg-item d2" style="grid-column:3;grid-row:4 / span 2">
-            <span class="wg-t">11:00&ndash;12:00</span>
-            <span class="wg-body"><span class="wg-n">Sec+ Boot Camp</span></span>
-          </article>
-          <article class="wg-item d2" style="grid-column:3;grid-row:6 / span 2">
-            <span class="wg-t">12:00&ndash;1:00</span>
-            <span class="wg-body"><span class="wg-n">Packet Sniffers</span></span>
-          </article>
-          <article class="wg-item d2" style="grid-column:3;grid-row:11 / span 2">
-            <span class="wg-t">2:30&ndash;3:30</span>
-            <span class="wg-body"><span class="wg-n">AI Agents</span><span class="schedule-until">Ends Oct 13</span></span>
-          </article>
-          <article class="wg-item d2" style="grid-column:3;grid-row:15 / span 2">
-            <span class="wg-t">4:30&ndash;5:30</span>
-            <span class="wg-body"><span class="wg-n">RHEL Rookies</span></span>
-          </article>
+          <div class="wk-col d3" data-day="3">
+            <div class="wk-head" data-day="3">Wed</div>
+            <article class="wk-card">
+              <span class="wk-t">12:00&ndash;1:00 PM</span>
+              <span class="wk-n">ACR Cryptography</span>
+              <span class="schedule-until">Ends Oct 14</span>
+            </article>
+            <article class="wk-card">
+              <span class="wk-t">1:00&ndash;2:00 PM</span>
+              <span class="wk-n">Hacking the Matrix</span>
+              <span class="schedule-until">Ends Oct 28</span>
+            </article>
+          </div>
 
-          <div class="wg-day d3" data-day="3" style="grid-column:4;grid-row:1">Wed</div>
-          <article class="wg-item d3" style="grid-column:4;grid-row:6 / span 2">
-            <span class="wg-t">12:00&ndash;1:00</span>
-            <span class="wg-body"><span class="wg-n">ACR Cryptography</span><span class="schedule-until">Ends Oct 14</span></span>
-          </article>
-          <article class="wg-item d3" style="grid-column:4;grid-row:8 / span 2">
-            <span class="wg-t">1:00&ndash;2:00</span>
-            <span class="wg-body"><span class="wg-n">Hacking the Matrix</span><span class="schedule-until">Ends Oct 28</span></span>
-          </article>
+          <div class="wk-col d4" data-day="4">
+            <div class="wk-head" data-day="4">Thu</div>
+            <article class="wk-card">
+              <span class="wk-t">12:00&ndash;1:00 PM</span>
+              <span class="wk-n">WiCySCR&sup2;</span>
+              <span class="wk-sub">WiCyS Cyber Role Ready</span>
+              <span class="schedule-until">Ends Oct 29</span>
+            </article>
+            <article class="wk-card">
+              <span class="wk-t">2:30&ndash;3:30 PM</span>
+              <span class="wk-n">Azure Avengers</span>
+            </article>
+          </div>
 
-          <div class="wg-day d4" data-day="4" style="grid-column:5;grid-row:1">Thu</div>
-          <article class="wg-item d4" style="grid-column:5;grid-row:6 / span 2">
-            <span class="wg-t">12:00&ndash;1:00</span>
-            <span class="wg-body"><span class="wg-n">WiCySCR&sup2;</span><span class="wg-sub">WiCyS Cyber Role Ready</span><span class="schedule-until">Ends Oct 29</span></span>
-          </article>
-          <article class="wg-item d4" style="grid-column:5;grid-row:11 / span 2">
-            <span class="wg-t">2:30&ndash;3:30</span>
-            <span class="wg-body"><span class="wg-n">Azure Avengers</span></span>
-          </article>
-
-          <div class="wg-day d5" data-day="5" style="grid-column:6;grid-row:1">Fri</div>
-          <article class="wg-item d5" style="grid-column:6;grid-row:2 / span 2">
-            <span class="wg-t">10:00&ndash;11:00</span>
-            <span class="wg-body"><span class="wg-n">SIGINT/Win++</span></span>
-          </article>
-          <article class="wg-item d5" style="grid-column:6;grid-row:4 / span 2">
-            <span class="wg-t">11:00&ndash;12:00</span>
-            <span class="wg-body"><span class="wg-n">Blue Current</span></span>
-          </article>
-          <article class="wg-item d5" style="grid-column:6;grid-row:6 / span 2">
-            <span class="wg-t">12:00&ndash;1:00</span>
-            <span class="wg-body"><span class="wg-n">Lunch / workshops</span><span class="wg-sub">AIM, CISO, or WiCyS</span></span>
-          </article>
-          <article class="wg-item d5" style="grid-column:6;grid-row:8 / span 2">
-            <span class="wg-t">1:00&ndash;2:00</span>
-            <span class="wg-body"><span class="wg-n">Beyond the Horizon</span></span>
-          </article>
-          <article class="wg-item d5" style="grid-column:6;grid-row:10 / span 2">
-            <span class="wg-t">2:00&ndash;3:00</span>
-            <span class="wg-body"><span class="wg-n">AWS Builder</span></span>
-          </article>
-          <article class="wg-item d5" style="grid-column:6;grid-row:12 / span 2">
-            <span class="wg-t">3:00&ndash;4:00</span>
-            <span class="wg-body"><span class="wg-n">Distro Wars: Cyber Defense</span></span>
-          </article>
-
-          <div class="wg-time" style="grid-row:2 / span 2">10 AM</div>
-          <div class="wg-time" style="grid-row:4 / span 2">11 AM</div>
-          <div class="wg-time" style="grid-row:6 / span 2">Noon</div>
-          <div class="wg-time" style="grid-row:8 / span 2">1 PM</div>
-          <div class="wg-time" style="grid-row:10 / span 2">2 PM</div>
-          <div class="wg-time" style="grid-row:12 / span 2">3 PM</div>
-          <div class="wg-time" style="grid-row:14 / span 2">4 PM</div>
-          <div class="wg-time" style="grid-row:16">5 PM</div>
-
-          <div class="wg-line" style="grid-row:2" aria-hidden="true"></div>
-          <div class="wg-line" style="grid-row:4" aria-hidden="true"></div>
-          <div class="wg-line" style="grid-row:6" aria-hidden="true"></div>
-          <div class="wg-line" style="grid-row:8" aria-hidden="true"></div>
-          <div class="wg-line" style="grid-row:10" aria-hidden="true"></div>
-          <div class="wg-line" style="grid-row:12" aria-hidden="true"></div>
-          <div class="wg-line" style="grid-row:14" aria-hidden="true"></div>
-          <div class="wg-line" style="grid-row:16" aria-hidden="true"></div>
-
-          <div class="wg-col d1" data-day="1" style="grid-column:2;grid-row:2 / -1" aria-hidden="true"></div>
-          <div class="wg-col d2" data-day="2" style="grid-column:3;grid-row:2 / -1" aria-hidden="true"></div>
-          <div class="wg-col d3" data-day="3" style="grid-column:4;grid-row:2 / -1" aria-hidden="true"></div>
-          <div class="wg-col d4" data-day="4" style="grid-column:5;grid-row:2 / -1" aria-hidden="true"></div>
-          <div class="wg-col d5" data-day="5" style="grid-column:6;grid-row:2 / -1" aria-hidden="true"></div>
+          <div class="wk-col d5" data-day="5">
+            <div class="wk-head" data-day="5">Fri</div>
+            <article class="wk-card">
+              <span class="wk-t">10:00&ndash;11:00 AM</span>
+              <span class="wk-n">SIGINT/Win++</span>
+            </article>
+            <article class="wk-card">
+              <span class="wk-t">11:00 AM&ndash;12:00 PM</span>
+              <span class="wk-n">Blue Current</span>
+            </article>
+            <article class="wk-card">
+              <span class="wk-t">12:00&ndash;1:00 PM</span>
+              <span class="wk-n">Lunch / workshops</span>
+              <span class="wk-sub">AIM, CISO, or WiCyS</span>
+            </article>
+            <article class="wk-card">
+              <span class="wk-t">1:00&ndash;2:00 PM</span>
+              <span class="wk-n">Beyond the Horizon</span>
+            </article>
+            <article class="wk-card">
+              <span class="wk-t">2:00&ndash;3:00 PM</span>
+              <span class="wk-n">AWS Builder</span>
+            </article>
+            <article class="wk-card">
+              <span class="wk-t">3:00&ndash;4:00 PM</span>
+              <span class="wk-n">Distro Wars: Cyber Defense</span>
+            </article>
+          </div>
         </div>
 
         <p class="week-foot reveal">

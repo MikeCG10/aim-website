@@ -450,8 +450,7 @@ a:hover { text-decoration: underline; }
   background: var(--surface-solid);
   border: 1px solid var(--border);
   border-radius: var(--radius);
-  max-height: 480px;
-  overflow: auto;
+  overflow: hidden;
 }
 
 .schedule-table {
@@ -460,9 +459,6 @@ a:hover { text-decoration: underline; }
 }
 
 .schedule-table thead th {
-  position: sticky;
-  top: 0;
-  z-index: 1;
   background: var(--surface-solid);
   text-align: left;
   font-family: var(--font-mono);
@@ -531,9 +527,6 @@ a:hover { text-decoration: underline; }
 }
 
 .schedule-day-row th {
-  position: sticky;
-  top: 43px;
-  z-index: 1;
   background: var(--bg-alt);
   text-align: left;
   font-family: var(--font-mono);
@@ -576,8 +569,15 @@ a:hover { text-decoration: underline; }
   color: var(--text-dim);
 }
 
-@media (max-width: 720px) {
-  .schedule-table { min-width: 640px; }
+@media (max-width: 560px) {
+  .schedule-table thead th,
+  .schedule-table tbody td,
+  .schedule-day-row th {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+  .schedule-table tbody td { font-size: 0.9rem; }
+  .schedule-time { font-size: 0.8rem; }
 }
 
 /* ===== Gallery ===== */

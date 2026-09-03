@@ -780,6 +780,35 @@ a:hover { text-decoration: underline; }
 .mentor-grid .mentor-hint { font-size: 0.72rem; }
 .mentor-grid .mentor-bio-inner p { font-size: 1rem; line-height: 1.65; }
 
+.mentor-availability {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  margin: 12px 0 0;
+  padding: 5px 12px;
+  border-radius: var(--radius-sm);
+  background: rgba(224, 169, 58, 0.1);
+  color: var(--mentorship);
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  line-height: 1.35;
+  text-align: left;
+}
+
+.mentor-availability::before {
+  content: "";
+  flex: none;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: currentColor;
+}
+
+.mentor-grid .mentor-availability { font-size: 0.78rem; }
+
 /* ===== Membership tiers ===== */
 .tier-grid {
   display: grid;
